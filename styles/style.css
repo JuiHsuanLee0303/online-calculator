@@ -54,6 +54,7 @@ div.calculator {
 }
 
 div.button {
+  cursor: pointer;
   margin: 1px;
   align-items: center;
   justify-content: center;
@@ -69,6 +70,9 @@ div.button {
 div.button:hover {
   background-color: rgb(179, 179, 179);
 }
+div.button:active {
+  background-color: rgb(111, 105, 105);
+}
 
 div.unpress {
   background-color: rgba(0, 0, 0, 0.5);
@@ -80,5 +84,5 @@ div#zero {
 }
 
 .press {
-  background-color: rgb(179, 179, 179);
+  background-color: rgb(111, 105, 105);
 }/*# sourceMappingURL=style.css.map */

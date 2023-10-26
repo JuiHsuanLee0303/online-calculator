@@ -5,6 +5,7 @@ let number = document.querySelector('div.screen h2');
 let keysPressed = {}; 
 let operate = null;
 let previousNumber = null;
+let previousInput = null;
 let _isNewNumber = false;
 
 function pressAction(ope) {
@@ -12,8 +13,10 @@ function pressAction(ope) {
         button.classList.remove('press');
         button.classList.add('unpress');
     });
-    document.querySelector(`div#${ope}`).classList.add('press');
-    document.querySelector(`div#${ope}`).classList.remove('unpress');
+    if (ope != null) {
+        document.querySelector(`div#${ope}`).classList.add('press');
+        document.querySelector(`div#${ope}`).classList.remove('unpress');
+    }
 
 }
 
@@ -21,11 +24,13 @@ function enterNum(num) {
     if (number.innerText.length > 27) { }
     else if(num === '.' && number.innerText.includes('.')) { }
     else {
-        if (_isNewNumber) {
+        if (_isNewNumber || previousInput === 'equal') {
             number.innerText = '';
             _isNewNumber = false;
         }
         number.innerText += num.toString();
+        previousInput = num;
+        pressAction(null);
     }
 }
 
@@ -52,6 +57,7 @@ function enterEqual() {
     number.innerText = preciseCalculate(operate, num1, num2).toString();
     operate = null;
     previousNumber = null;
+    previousInput = 'equal';
 }
 
 
@@ -63,6 +69,7 @@ function enterOperator(ope) {
         previousNumber = number.innerText;
         _isNewNumber = true;
         pressAction(ope);
+        previousInput = ope;
     }
 }
 
@@ -108,7 +115,7 @@ window.addEventListener("keydown", function(e) {
 
     else if (code === 'Enter' || code === 'Equal') {
         enterEqual();
-        pressAction('equal');
+        pressAction(null);
     }
 
     //numbers

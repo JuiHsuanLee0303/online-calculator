@@ -1,3 +1,6 @@
+$hover-color: rgb(179, 179, 179);
+$press-color: rgb(111, 105, 105);
+
 * {
     margin: 0;
     padding: 0;
@@ -54,6 +57,7 @@ div.calculator {
 }
 
 div.button {
+    cursor: pointer;
     margin: 1px;
     align-items: center;
     justify-content: center;
@@ -66,7 +70,10 @@ div.button {
     border-radius: 2%;
     flex-grow: 1;
     &:hover {
-        background-color: rgb(179, 179, 179);
+        background-color: $hover-color;
+    }
+    &:active{
+        background-color: $press-color;
     }
 }
 
@@ -80,5 +87,5 @@ div#zero {
 }
 
 .press {
-    background-color: rgb(179, 179, 179);
+    background-color: $press-color;
 }
