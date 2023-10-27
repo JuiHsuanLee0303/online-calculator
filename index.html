@@ -1,94 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Online Calculator</title>
-    <link rel="stylesheet" href="./styles/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <nav>
-        <div class="nav">
-            <a href="#">Simple Calculator</a>
-        </div>
-        <div class="nav">
-            <a href="#">Scienctific Calculator</a>
-        </div>
+      <div class="nav">
+        <a href="#">iPhone Calculator</a>
+      </div>
+      <div class="nav">
+        <a href="#">Scienctific Calculator</a>
+      </div>
     </nav>
     <main>
-        <div class="container">
-            <div class="calculator screen">
-                <h2>0</h2>
-            </div>
+      <div class="container">
+        <div class="calculator screen">
+          <h2>0</h2>
         </div>
-        <div class="container">
-            <div class="operator button unpress" id="ac">
-                <h2>AC</h2>
-            </div>
-            <div class="operator button unpress" id="sign">
-                <h2>+/-</h2>
-            </div>
-            <div class="operator button unpress" id="percent">
-                <h2>%</h2>
-            </div>
-            <div class="operator button unpress" id="divide">
-                <h2>&#247</h2>
-            </div>
+      </div>
+      <div class="container">
+        <div class="operator button lightColor unpress" id="ac">
+          <h2>AC</h2>
         </div>
-        <div class="container">
-            <div class="number button unpress" id="seven">
-                <h2>7</h2>
-            </div>
-            <div class="number button unpress" id="eight">
-                <h2>8</h2>
-            </div>
-            <div class="number button unpress" id="nine">
-                <h2>9</h2>
-            </div>
-            <div class="operator button unpress" id="multiply">
-                <h2>x</h2>
-            </div>
+        <div class="operator button lightColor unpress" id="sign">
+          <h2>+/-</h2>
         </div>
-        <div class="container">
-            <div class="number button unpress" id="four">
-                <h2>4</h2>
-            </div>
-            <div class="number button unpress" id="five">
-                <h2>5</h2>
-            </div>
-            <div class="number button unpress" id="six">
-                <h2>6</h2>
-            </div>
-            <div class="operator button unpress" id="minus">
-                <h2>-</h2>
-            </div>
+        <div class="operator button lightColor unpress" id="percent">
+          <h2>%</h2>
         </div>
-        <div class="container">
-            <div class="number button unpress" id="one">
-                <h2>1</h2>
-            </div>
-            <div class="number button unpress" id="two">
-                <h2>2</h2>
-            </div>
-            <div class="number button unpress" id="three">
-                <h2>3</h2>
-            </div>
-            <div class="operator button unpress" id="plus">
-                <h2>+</h2>
-            </div>
+        <div class="operator button orangeColor unpress" id="divide">
+          <h2>÷</h2>
         </div>
-        <div class="container">
-            <div class="number button unpress" id="zero">
-                <h2>0</h2>
-            </div>
-            <div class="number button unpress" id="dot">
-                <h2>.</h2>
-            </div>
-            <div class="operator button unpress" id="equal">
-                <h2>=</h2>
-            </div>
+      </div>
+      <div class="container">
+        <div class="number button darkColor unpress" id="seven">
+          <h2>7</h2>
         </div>
+        <div class="number button darkColor unpress" id="eight">
+          <h2>8</h2>
+        </div>
+        <div class="number button darkColor unpress" id="nine">
+          <h2>9</h2>
+        </div>
+        <div class="operator button orangeColor unpress" id="multiply">
+          <h2>x</h2>
+        </div>
+      </div>
+      <div class="container">
+        <div class="number button darkColor unpress" id="four">
+          <h2>4</h2>
+        </div>
+        <div class="number button darkColor unpress" id="five">
+          <h2>5</h2>
+        </div>
+        <div class="number button darkColor unpress" id="six">
+          <h2>6</h2>
+        </div>
+        <div class="operator button orangeColor unpress" id="minus">
+          <h2>-</h2>
+        </div>
+      </div>
+      <div class="container">
+        <div class="number button darkColor unpress" id="one">
+          <h2>1</h2>
+        </div>
+        <div class="number button darkColor unpress" id="two">
+          <h2>2</h2>
+        </div>
+        <div class="number button darkColor unpress" id="three">
+          <h2>3</h2>
+        </div>
+        <div class="operator button orangeColor unpress" id="plus">
+          <h2>+</h2>
+        </div>
+      </div>
+      <div class="container">
+        <div class="number button darkColor unpress" id="zero">
+          <h2>0</h2>
+        </div>
+        <div class="number button darkColor unpress" id="dot">
+          <h2>.</h2>
+        </div>
+        <div class="operator button orangeColor unpress" id="equal">
+          <h2>=</h2>
+        </div>
+      </div>
     </main>
     <script src="./app.js"></script>
-</body>
+  </body>
 </html>
